@@ -42,6 +42,17 @@ def main():
     plt.grid(True)
     plt.savefig('./time_graph.png')
 
+    plt.figure(figsize=(14,6))
+    plt.plot(sizes[:8], m_sort_times[:8], label='Merge Sort')
+    plt.plot(sizes[:8], i_sort_times[:8], label='Insertion Sort')
+    plt.xlabel('Array Size (n)')
+    plt.ylabel('Time (seconds)')
+    plt.title('Sorting Algorithm Timings, Small Values')
+    plt.legend()
+    # plt.xticks(sizes[4:], rotation=45, ha='right')
+    plt.grid(True)
+    plt.savefig('./time_graph_small.png')
+
     plt.show()
     return
 
